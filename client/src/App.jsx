@@ -1,20 +1,20 @@
-import { Footer, Navbar,Welcome } from "./components"
-import CardSection from "./components/CardSection"
-import FundraisingInfoSection from "./components/FundraisingInfoSection"
-const App = () =>{
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Crw from './routes/crw'
+import GetStarted from './routes/GetStarted';
+import Tutorials from './routes/Tutorials';
+import Wallets from './routes/Wallets';
 
-  return (
-   <div className="min-h-screen">
-      <div className="gradient-bg-welcome">
-        <Navbar/>
-        <Welcome/>
-      </div>
-      <CardSection/>
-      <FundraisingInfoSection/>
-      <br/><br/><br/><br/>
-      <Footer/>
-   </div> 
-  )
+const App = () => {
+    return (
+        <Routes>
+            <Route path="/" element={<Crw/>} />
+            <Route path="/get-started" element={<GetStarted />} />
+            <Route path="/tutorials" element={<Tutorials />} />
+            <Route path="/wallets" element={<Wallets />} />
+        </Routes>
+                
+    );
 }
 
-export default App
+export default App;

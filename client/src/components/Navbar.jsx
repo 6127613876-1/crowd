@@ -1,56 +1,67 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { HiMenuAlt4 } from 'react-icons/hi';
+import { AiOutlineClose } from 'react-icons/ai';
 
-import {HiMenuAlt4} from 'react-icons/hi'
-import {AiOutlineClose} from 'react-icons/ai'
+import logo from '../../images/cbg.webp';
 
-import logo from '../../images/cbg.webp'
+const Navbar = () => {
+    const [toggleMenu, setToggleMenu] = useState(false);
 
-const NavbarItems =({title,classProps}) => {
-    return(
-        <li className={`mx-4 cursor-pointer ${classProps}`}>
-            {title}
-
-        </li>
-    )
-}
-
-const Navbar = () =>{
-    const [toogleMenu,settoogleMenu] = useState(false);
-
-    return(
-        <nav className='w-full flex md:justify-center justify-between items-center p-4 '>
-            <div className='md:flex-[1] flex-initial justify-center items-center '>
-                <img src={logo} alt="logo" className='w-32 cursor-pointer rounded-full'/>
+    return (
+        <nav className="w-full flex md:justify-center justify-between items-center p-4">
+            <div className="md:flex-[1] flex-initial justify-center items-center">
+                <Link to="/">
+                    <img src={logo} alt="logo" className="w-32 cursor-pointer rounded-full" />
+                </Link>
             </div>
-            <ul className='text-white md:flex hidden list-none flex-row justify-between items-center flex-initial'>
-                {["Get Started","Campaign","Tutorials","Wallets"].map((item,index)=>(
-                    <NavbarItems key={item+index} title={item}/>
-                ))}
-                <li className='bg-[#2852e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]'>
+            <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
+                <li className="mx-4 cursor-pointer">
+                    <Link to="/get-started">Get Started</Link>
+                </li>
+                <li className="mx-4 cursor-pointer">
+                    <Link to="/campaign">Campaign</Link>
+                </li>
+                <li className="mx-4 cursor-pointer">
+                    <Link to="/tutorials">Tutorials</Link>
+                </li>
+                <li className="mx-4 cursor-pointer">
+                    <Link to="/wallets">Wallets</Link>
+                </li>
+                <li className="bg-[#2852e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
                     Login
                 </li>
             </ul>
-            <div className='flex relative'>
-                {toogleMenu
-                    ?<AiOutlineClose fontSize={28} className='text-white md:hidden cursor-pointer' onClick={()=>settoogleMenu(false)}/>
-                    :<HiMenuAlt4 fontSize={28} className='text-white md:hidden cursor-pointer' onClick={()=>settoogleMenu(true)} />}
-                {toogleMenu && (
+            <div className="flex relative">
+                {toggleMenu
+                    ? <AiOutlineClose fontSize={28} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(false)} />
+                    : <HiMenuAlt4 fontSize={28} className="text-white md:hidden cursor-pointer" onClick={() => setToggleMenu(true)} />}
+                {toggleMenu && (
                     <ul
-                        className='z-10 fixed top-0 right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none
-                            flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in
-                        '
+                        className="z-10 fixed top-0 right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none
+                            flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in cu
+                        "
                     >
-                        <li className='text-xl w-full my-2 '>
-                            <AiOutlineClose onClick={() => settoogleMenu(false)} />
+                        <li className="text-xl w-full my-2">
+                            <AiOutlineClose onClick={() => setToggleMenu(false)} />
                         </li>
-                        {["Get Started","Campaign","Tutorials","Wallets"].map((item,index)=>(
-                        <NavbarItems key={item+index} title={item} classProps='my-2 text-lg'/>
-                ))}
+                        <li className="my-2 text-lg">
+                            <Link to="/get-started" onClick={() => setToggleMenu(false)}>Get Started</Link>
+                        </li>
+                        <li className="my-2 text-lg">
+                            <Link to="/campaign" onClick={() => setToggleMenu(false)}>Campaign</Link>
+                        </li>
+                        <li className="my-2 text-lg">
+                            <Link to="/tutorials" onClick={() => setToggleMenu(false)}>Tutorials</Link>
+                        </li>
+                        <li className="my-2 text-lg">
+                            <Link to="/wallets" onClick={() => setToggleMenu(false)}>Wallets</Link>
+                        </li>
                     </ul>
                 )}
             </div>
         </nav>
     );
-}
+};
 
 export default Navbar;
