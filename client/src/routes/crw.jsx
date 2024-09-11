@@ -8,11 +8,11 @@ const crw = () => {
                 <div className="gradient-bg-welcome">
                     <Navbar />
                     <Welcome />
+                    <CardSection/>
+                    <FundraisingInfoSection />
+                    <br/>
+                    <Footer/>
                 </div>
-                <CardSection/>
-                <FundraisingInfoSection />
-                <br /><br /><br /><br />
-                <Footer />
         </div>
     )
 }

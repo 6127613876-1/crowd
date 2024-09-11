@@ -21,7 +21,14 @@ body {
   radial-gradient(at 100% 0%, rgb(10, 10, 10) 0, transparent 50%); 
   
 }
-
+.gradient-bg-get {
+  background-color:#0f0e13;
+  background-image: 
+  radial-gradient(at 0% 0%, rgb(103, 181, 249) 0, transparent 50%),
+  radial-gradient(at 50% 0%, rgb(30, 144, 255) 0, transparent 50%), 
+  radial-gradient(at 100% 0%, rgb(10, 10, 10) 0, transparent 50%); 
+  
+}
 .gradient-bg-footer {
   background-color: #0f0e13;
   background-image: 
@@ -29,6 +36,8 @@ body {
   radial-gradient(at 50% 0%, rgb(30, 144, 255) 0, transparent 50%), 
   radial-gradient(at 100% 0%, rgb(10, 10, 10) 0, transparent 50%); 
 }
+
+
 
 .blue-glassmorphism {
   background: rgb(39, 51, 89, 0.4);

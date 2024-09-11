@@ -14,6 +14,9 @@ const Navbar = () => {
                 <Link to="/">
                     <img src={logo} alt="logo" className="w-32 cursor-pointer rounded-full" />
                 </Link>
+                <h1 className="text-3xl sm:text-2xl text-white ">
+                            CrowdChain
+                </h1>
             </div>
             <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
                 <li className="mx-4 cursor-pointer">
@@ -29,7 +32,7 @@ const Navbar = () => {
                     <Link to="/wallets">Wallets</Link>
                 </li>
                 <li className="bg-[#2852e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
-                    Login
+                    <Link to="/login">Login</Link>
                 </li>
             </ul>
             <div className="flex relative">

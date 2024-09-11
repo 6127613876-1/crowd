@@ -1,12 +1,11 @@
-import React from 'react';
+import React from "react";
 
-const GetStarted = () => {
-    return (
+const GetStarted = () =>{
+    return(
         <div>
-            <h1>Get Started</h1>
-            <p>Welcome to the Get Started page!</p>
+            <h1>GET Started</h1>
         </div>
-    );
-};
+    )
+}
 
 export default GetStarted;
