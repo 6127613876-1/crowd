@@ -37,6 +37,7 @@ const Footer = () => (
       <FaTwitter fontSize={32} className="text-white  cursor-pointer pr-2"/>
       <FaInstagram fontSize={32} className="text-white  cursor-pointer pr-2"/>
     </div>
+    
   </div>
   
 );
