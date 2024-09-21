@@ -29,7 +29,7 @@ const Navbar = () => {
                     <Link to="/tutorials">Tutorials</Link>
                 </li>
                 <li className="mx-4 cursor-pointer">
-                    <Link to="/wallets">Wallets</Link>
+                    <Link to="/payment">Payment</Link>
                 </li>
                 <li className="bg-[#2852e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
                     <Link to="/login">Login</Link>

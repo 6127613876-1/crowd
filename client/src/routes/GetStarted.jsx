@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import { FaGoogle, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../assets/cbg.webp";
+import { Spotlight } from "../components/ui/Spotlight";
 
 const commonStyles =
   "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-white";
@@ -10,18 +11,22 @@ const commonStyles =
 const GetStarted = () => {
   return (
     <div className="gradient-bg-welcome">
+      <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="white"
+      />
       <Navbar />
       <div className="min-h-screen text-white p-8">
         <div className="flex justify-center space-x-4 mb-8">
-          <div className="gradient-bg-footers p-4 rounded-lg w-35 text-center">
+          <div className="bg-gray-900  p-4 rounded-lg w-35 text-center">
             <h1 className="text-4xl font-bold text-white">2M+</h1>
             <p className="text-gray-400">smart contracts deployed</p>
           </div>
-          <div className="gradient-bg-footers p-4 rounded-lg w-35 text-center">
+          <div className="bg-gray-900  p-4 rounded-lg w-35 text-center">
             <h1 className="text-4xl font-bold text-white">1M+</h1>
             <p className="text-gray-400">monthly transactions</p>
           </div>
-          <div className="gradient-bg-footers p-4 rounded-lg w-35 text-center">
+          <div className="bg-gray-900  p-4 rounded-lg w-35 text-center">
             <h1 className="text-4xl font-bold text-white">1,000+</h1>
             <p className="text-gray-400">EVM chains</p>
           </div>
@@ -37,8 +42,7 @@ const GetStarted = () => {
           </p>
         </div>
 
-        {/* Cards Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
           {[
             { title: "NFT Drop", author: "thirdweb.eth" },
             { title: "Marketplace", author: "thirdweb.eth" },
@@ -47,7 +51,7 @@ const GetStarted = () => {
             { title: "Token", author: "thirdweb.eth" },
             { title: "StakeERC721", author: "thirdweb.eth" },
           ].map((item, index) => (
-            <div key={index} className="gradient-bg-footer p-4 rounded-lg">
+            <div key={index} className=" bg-gray-900 p-4 rounded-lg " >
               <p className="text-green-500 mb-2">Audited</p>
               <h3 className="text-lg font-semibold text-white">{item.title}</h3>
               <p className="text-gray-400">{item.author}</p>
@@ -81,10 +85,10 @@ const GetStarted = () => {
               Tutorials
             </Link>
             <Link
-              to="/wallets"
+              to="/payment"
               className="text-white text-base text-center mx-2 cursor-pointer"
             >
-              Wallets
+              Payment
             </Link>
             <Link
               to="/about"

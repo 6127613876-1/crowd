@@ -14,7 +14,7 @@ const Footer = () => (
         <Link to="/get-started" className="text-white text-base text-center mx-2 cursor-pointer">Get Started</Link>
         <Link to="/campaign" className="text-white text-base text-center mx-2 cursor-pointer">Campaign</Link>
         <Link to="/tutorials" className="text-white text-base text-center mx-2 cursor-pointer">Tutorials</Link>
-        <Link to="/wallets" className="text-white text-base text-center mx-2 cursor-pointer">Wallets</Link>
+        <Link to="/payment" className="text-white text-base text-center mx-2 cursor-pointer">Payment</Link>
         <Link to="/about" className="text-white text-base text-center mx-2 cursor-pointer">About</Link>
 
       </div>

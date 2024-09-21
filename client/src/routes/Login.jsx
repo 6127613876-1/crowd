@@ -7,6 +7,8 @@ import { ThirdwebProvider, ConnectButton,ConnectEmbed } from "thirdweb/react";
 import { createWallet, inAppWallet,injectedProvider  } from "thirdweb/wallets";
 const client = createThirdwebClient({ clientId: "f77515d189e3c3cda68e0a7bf0c1779a" });
 import {FaGoogle,FaFacebook,FaTwitter,FaInstagram} from 'react-icons/fa'
+import { Navbar } from '../components';
+import { Spotlight } from "../components/ui/Spotlight";
 
 const wallets = [
     inAppWallet(),
@@ -17,14 +19,12 @@ const wallets = [
 
 const Login = () => {
     return (
-      <div className="gradient-bg-get text-white">
-        <Link to="/">
-          <img
-            src={logo}
-            alt="logo"
-            className="w-32 cursor-pointer rounded-full ml-5 "
-          />
-        </Link>
+      <div className="gradient-bg-welcome text-white">
+        <Navbar/>
+        <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="white"
+      />
         <h1
           className="font-sans text-4xl sm:text-5xl "
           style={{ marginLeft: "820px" }}
@@ -96,10 +96,10 @@ const Login = () => {
                 Tutorials
               </Link>
               <Link
-                to="/wallets"
+                to="/payment"
                 className="text-white text-base text-center mx-2 cursor-pointer"
               >
-                Wallets
+                Payment
               </Link>
               <Link
                 to="/about"
