@@ -96,10 +96,10 @@ const Login = () => {
                 Tutorials
               </Link>
               <Link
-                to="/payment"
+                to="/profile"
                 className="text-white text-base text-center mx-2 cursor-pointer"
               >
-                Payment
+                profile
               </Link>
               <Link
                 to="/about"

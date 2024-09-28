@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import { FaGoogle, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from "../assets/cbg.webp";
-import { Spotlight } from "../components/ui/Spotlight";
 
 const commonStyles =
   "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-white";
@@ -11,10 +10,7 @@ const commonStyles =
 const GetStarted = () => {
   return (
     <div className="gradient-bg-welcome">
-      <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="white"
-      />
+      
       <Navbar />
       <div className="min-h-screen text-white p-8">
         <div className="flex justify-center space-x-4 mb-8">
@@ -85,10 +81,10 @@ const GetStarted = () => {
               Tutorials
             </Link>
             <Link
-              to="/payment"
+              to="/profile"
               className="text-white text-base text-center mx-2 cursor-pointer"
             >
-              Payment
+              profile
             </Link>
             <Link
               to="/about"

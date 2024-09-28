@@ -29,7 +29,7 @@ const Navbar = () => {
                     <Link to="/tutorials">Tutorials</Link>
                 </li>
                 <li className="mx-4 cursor-pointer">
-                    <Link to="/payment">Payment</Link>
+                    <Link to="/profile">Profile</Link>
                 </li>
                 <li className="bg-[#2852e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
                     <Link to="/login">Login</Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
                             <Link to="/tutorials" onClick={() => setToggleMenu(false)}>Tutorials</Link>
                         </li>
                         <li className="my-2 text-lg">
-                            <Link to="/wallets" onClick={() => setToggleMenu(false)}>Wallets</Link>
+                            <Link to="/profile" onClick={() => setToggleMenu(false)}>Wallets</Link>
                         </li>
                     </ul>
                 )}
@@ -66,5 +66,5 @@ const Navbar = () => {
         </nav>
     );
 };
-//sRYE4xs9LaYX4M-XGhbECxZZd7p_EMneQE1CP9t1eNFEkMmW7Eh1FS4TswPXLNu71o7BbhDNRTV8TqY2LwULuQ
+
 export default Navbar;
